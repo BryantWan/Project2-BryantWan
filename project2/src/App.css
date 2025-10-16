@@ -1,38 +1,4 @@
 
-.logo {
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 .character {
   background-color: grey;
   color: white;
@@ -47,7 +13,19 @@
 
 body { 
   background-color: navy;
-  
+  margin:0px;
+}
+
+.top {
+  margin: 0px;
+  background-color: lightgrey;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 h1 {
@@ -57,4 +35,21 @@ h1 {
 .info {
   flex: 0 1 auto;
   display: flex;
+
+}
+
+.buttons {
+  width: 100px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  background-color: lightgrey;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

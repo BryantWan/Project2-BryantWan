@@ -1,10 +1,11 @@
-import Yumi from "../assets/portraits/Yumi.png"
-export function Character() {
+
+export function Character({name, image, bio}) {
     return  ( <div className="character">
-        <h2>Yumi Chen</h2>
-        <img src={Yumi} width="300px" />
+        <h2>{name}</h2>
+        <img src={image} width="300px" />
 
 
         </div>)
 
 }
+
