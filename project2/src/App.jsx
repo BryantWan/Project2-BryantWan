@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import BRC from './assets/faction/BRC corps.png'
+import BRC from './assets/Faction/BRC corps.png'
 import './App.css'
 /*import { Division } from './components/division.jsx'*/
 import { Character } from './components/OC.jsx'
