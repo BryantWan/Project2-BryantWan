@@ -1,6 +1,6 @@
 import infantry from "../assets/Infantry/Infantry.png"
 import engineer from "../assets/Support/Engineer.png"
-import paratrooper from "../assets/Infantry/paratroop.png"
+import paratrooper from "../assets/Infantry/Paratroop.png"
 import recon from "../assets/Support/Recon.png"
 import artillery from "../assets/Support/Support_Artillery.png"
 import signal from "../assets/Support/Signal_company.png"
