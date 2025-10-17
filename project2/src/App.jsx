@@ -1,13 +1,15 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import BRC from './assets/faction/BRC corps.png'
 import './App.css'
-import { Division } from './components/division.jsx'
+/*import { Division } from './components/division.jsx'*/
 import { Character } from './components/OC.jsx'
-import {  Characterbio } from './components/OCbio.jsx'
+import { Characterbio } from './components/OCbio.jsx'
+import { YumiDivision } from './components/division.jsx'
+import { DongmeiDivision } from './components/division.jsx'
+import {AmeliaDivision} from './components/division.jsx'
 import Yumi from "./assets/portraits/Yumi.png"
-import Dongmei from "./assets/portraits/hornet.png"
+import Dongmei from "./assets/portraits/Dongmei.png"
 import Amelia from "./assets/portraits/Amelia.png"
 
 function App() {
@@ -26,6 +28,7 @@ function App() {
     function changeToAmelia() {
     setCurrentCharacter("Amelia");
   }
+
   /* 
   1.) How to pass props into a component.
   2.) Conditional Rendering
@@ -45,14 +48,43 @@ function App() {
 
     <div className="info">
       <div className="buttons">
-        <button onClick={changeToYumi}>Yumi</button>
-        <button onClick={changeToDongmei}> Dongmei </button>
+        <button onClick={changeToYumi}>Yumi Chen</button>
+        <button onClick={changeToDongmei}> Dongmei Chen </button>
         <button onClick={changeToAmelia}> Amelia Reed </button>
       </div>
-      {currentCharacter == "Yumi" && <Character name = "Yumi" image = {Yumi} bio={Characterbio}/> }
-      {currentCharacter == "Dongmei" && <Character name = "Dongmei" image = {Dongmei} bio={Characterbio}/>}
-      {currentCharacter == "Amelia" && <Character name = "Amelia" image = {Amelia} bio={Characterbio}/>}
-      <Division/>
+      <div className="character-display">
+        {currentCharacter === "Yumi" && (
+          <Character 
+            name="Yumi Chen" 
+            image={Yumi} 
+          />
+        )}
+        {currentCharacter === "Dongmei" && (
+          <Character 
+            name="Dongmei Chen" 
+            image={Dongmei} 
+          />
+        )}
+        {currentCharacter === "Amelia" && (
+          <Character 
+            name="Amelia" 
+            image={Amelia} 
+          />
+        )}
+      </div>
+        <div className="bio">
+          <Characterbio name={currentCharacter} bio={
+            currentCharacter === "Yumi" ? "Yumi's bio here" :
+            currentCharacter === "Dongmei" ? "Dongmei's bio here" :
+            currentCharacter === "Amelia" ? "Amelia's bio here" :
+            "This person cannot be found."
+          }/>
+        </div>
+        <div className="division">
+        {currentCharacter === "Yumi" && <YumiDivision />}
+        {currentCharacter === "Dongmei" && <DongmeiDivision />}
+        {currentCharacter === "Amelia" && <AmeliaDivision />}
+        </div>
     </div>
     </>
   )

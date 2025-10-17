@@ -1,17 +1,40 @@
 
+
 .character {
   background-color: grey;
   color: white;
   padding: 1px;
+  margin-left: 5px;
+  border: 1px;
+  border-color: black;
 }
 
 .division {
   background-color: grey;
   color: white;
-  padding: 1px;
+  border-color: black;
+  width: 475px;
 }
 
-body { 
+.template {
+  display: block;
+  margin: 0 auto;
+}
+.loadout {
+  display: block;
+  margin: 0 auto;
+}
+
+.bio {
+  background-color: grey;
+  color: white;
+  padding: 1px;
+  width: 250px;
+  border-color: black;
+}
+
+
+body {
   background-color: navy;
   margin:0px;
 }
@@ -46,10 +69,17 @@ h1 {
 }
 
 button {
+  width: 75px;
+  height: 50px;
   margin: 5px;
+  margin-right: 10px;
   padding: 10px;
   background-color: lightgrey;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgrey;
 }
