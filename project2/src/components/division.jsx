@@ -137,7 +137,7 @@ export function AmeliaDivision() {
           </tr>
         </tbody>
       </table>
-      <br></br>What? You think Amelia Reed has a military division? She's an untrained civilian survivalist surviving in a zombie apocalypse for goodness sake! Do you SERIOUSLY think she can lead a military division with no military training nor anything about tactics?
+      <br></br>What? You seriously thought Amelia Reed has a military division? She's an untrained civilian survivalist in a zombie apocalypse for goodness sake! Do you SERIOUSLY think she can lead a military division with no military training nor any knowledge about tactics? She can barely even operate a firearm properly...
     </div>
   );
 }
