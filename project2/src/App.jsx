@@ -29,6 +29,20 @@ function App() {
     setCurrentCharacter("Amelia");
   }
 
+  function handleCharacterChange(character) {
+    switch (character) {
+      case "Yumi":
+        return "Yumi's bio here";
+      case "Dongmei":
+        return "Dongmei's bio here";
+      case "Amelia":
+        return "Amelia's bio here";
+      default:
+        return "This person cannot be found.";
+    }
+  }
+  
+
   /* 
   1.) How to pass props into a component.
   2.) Conditional Rendering
@@ -73,12 +87,7 @@ function App() {
         )}
       </div>
         <div className="bio">
-          <Characterbio name={currentCharacter} bio={
-            currentCharacter === "Yumi" ? "Yumi's bio here" :
-            currentCharacter === "Dongmei" ? "Dongmei's bio here" :
-            currentCharacter === "Amelia" ? "Amelia's bio here" :
-            "This person cannot be found."
-          }/>
+          <Characterbio name={currentCharacter} bio={handleCharacterChange(currentCharacter)}/>
         </div>
         <div className="division">
         {currentCharacter === "Yumi" && <YumiDivision />}
