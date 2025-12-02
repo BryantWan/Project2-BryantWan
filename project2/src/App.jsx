@@ -21,11 +21,11 @@ function App() {
     setCurrentCharacter("Yumi");
   }
 
-    function changeToDongmei() {
+  function changeToDongmei() {
     setCurrentCharacter("Dongmei");
   }
 
-    function changeToAmelia() {
+  function changeToAmelia() {
     setCurrentCharacter("Amelia");
   }
 
@@ -42,6 +42,18 @@ function App() {
     }
   }
   
+  function divisionchange(character) {
+    switch (character) {
+      case "Yumi":
+        return <YumiDivision />;
+      case "Dongmei":
+        return <DongmeiDivision />;
+      case "Amelia":
+        return <AmeliaDivision />;
+      default:
+        return null;
+    }
+  }
 
   /* 
   1.) How to pass props into a component.
@@ -57,7 +69,7 @@ function App() {
         <img src={BRC} width="100px" />
         <h1>Blue Rifle Corps Investigation Bureau</h1>
       </div>
-      <h2> <strong>WARNING:</strong> Unauthorized use without proper authorization from the BRCIB or the Chief of  Staff will result in severe punishment.</h2>
+      <h2> <span style={{color: 'red', fontWeight: 'bold'}}>WARNING:</span> Unauthorized use without proper authorization from the BRCIB or the Chief of  Staff will result in severe punishment.</h2>
     </div>
 
     <div className="info">
@@ -90,9 +102,7 @@ function App() {
           <Characterbio name={currentCharacter} bio={handleCharacterChange(currentCharacter)}/>
         </div>
         <div className="division">
-        {currentCharacter === "Yumi" && <YumiDivision />}
-        {currentCharacter === "Dongmei" && <DongmeiDivision />}
-        {currentCharacter === "Amelia" && <AmeliaDivision />}
+        {divisionchange(currentCharacter)}
         </div>
     </div>
     </>

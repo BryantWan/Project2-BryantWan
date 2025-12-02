@@ -10,6 +10,7 @@ export function Characterbio({name}) {
     return (
         <div className="character">
             {/* Display bio based on the name prop */}
+            <h2>Bio:</h2>
             {name && characterBios[name] && <p>{characterBios[name]}</p>}
         </div>
     );
