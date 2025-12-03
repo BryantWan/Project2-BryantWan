@@ -9,10 +9,12 @@ import { YumiDivision } from './components/division.jsx'
 import { DongmeiDivision } from './components/division.jsx'
 import {AmeliaDivision} from './components/division.jsx'
 import {BlueSWATDivision} from './components/division.jsx'
+import {SophieDivision} from './components/division.jsx'
 import Yumi from "./assets/portraits/Yumi.png"
 import Dongmei from "./assets/portraits/Dongmei.png"
 import Amelia from "./assets/portraits/Amelia.png"
 import Blue from "./assets/portraits/Blue.png"
+import Sophie from "./assets/portraits/Sophie.png"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,16 +37,23 @@ function App() {
     setCurrentCharacter("Blue");
   }
 
+  function changetoSophie() {
+    setCurrentCharacter("Sophie");
+  }
+
   function handleCharacterChange(character) {
     switch (character) {
       case "Yumi":
         return "Yumi's bio here";
       case "Dongmei":
         return "Dongmei's bio here";
-      case "Amelia":
-        return "Amelia's bio here";
       case "Blue":
         return "Blue's bio here";
+      case "Sophie":
+        return "Sophie's bio here";
+      case "Amelia":
+        return "Amelia's bio here";
+
       default:
         return "This person cannot be found.";
     }
@@ -56,10 +65,45 @@ function App() {
         return <YumiDivision />;
       case "Dongmei":
         return <DongmeiDivision />;
-      case "Amelia":
-        return <AmeliaDivision />;
       case "Blue":
         return <BlueSWATDivision />;
+      case "Sophie":
+        return <SophieDivision />;
+      case "Amelia":
+        return <AmeliaDivision />;
+      default:
+        return null;
+    }
+  }
+
+  function portraitnamechange(character) {
+    switch (character) {
+      case "Yumi":
+        return <Character 
+            name="Yumi Chen" 
+            image={Yumi} 
+          />;
+      case "Dongmei":
+        return <Character 
+            name="Dongmei Chen" 
+            image={Dongmei} 
+          />;
+      case "Blue":
+        return <Character 
+            name="Blue SWAT" 
+            image={Blue} 
+          />;
+      case "Sophie":
+        return <Character 
+            name="Sophie Yazov" 
+            image={Sophie} 
+          />;
+      case "Amelia":
+        return <Character 
+            name="Amelia Reed" 
+            image={Amelia} 
+          />;
+      
       default:
         return null;
     }
@@ -87,11 +131,13 @@ function App() {
         <button onClick={changeToYumi}>Yumi Chen</button>
         <button onClick={changeToDongmei}> Dongmei Chen </button>
         <button onClick={changeToBlue}> Blue SWAT </button>
+        <button onClick={changetoSophie}> Sophie Yazov </button>
         <button onClick={changeToAmelia}> Amelia Reed </button>
 
       </div>
       <div className="character-display">
-        {currentCharacter === "Yumi" && (
+        {portraitnamechange(currentCharacter)}
+        {/*{currentCharacter === "Yumi" && (
           <Character 
             name="Yumi Chen" 
             image={Yumi} 
@@ -114,7 +160,7 @@ function App() {
             name="Blue SWAT" 
             image={Blue} 
           />
-        )}
+        )}*/}
       </div>
         <div className="bio">
           <Characterbio name={currentCharacter} bio={handleCharacterChange(currentCharacter)}/>

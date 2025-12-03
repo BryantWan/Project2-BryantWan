@@ -8,6 +8,10 @@ import blankslot from "../assets/Blank_slot.png"
 import MP from "../assets/Support/Military_Police.png"
 import bike from "../assets/Infantry/Bicycle_Battalion.png"
 import cavalry from "../assets/Mobile/Cavalry.png"
+import modtank from "../assets/Armor/Modern_Tank.png"
+import motorized from "../assets/Mobile/Motorized.png"
+import maintanence from "../assets/Support/Maintenance_company.png"
+import logistics from "../assets/Support/Logistics_company.png"
 import double from "../assets/Amelia only/smolbarrel.jpg"
 import R700 from "../assets/Amelia only/R700.jpg"
 import glock from "../assets/Amelia only/smolglock.jpg"
@@ -148,7 +152,7 @@ export function AmeliaDivision() {
 export function BlueSWATDivision() {
   return (
     <div className="division">
-      <h2>Blue Rifle Corps Air Corps Division</h2>
+      <h2>Blue Rifle Corps Military Police</h2>
       <table class="template" border="1">
         <tbody>
           <tr>
@@ -190,6 +194,60 @@ export function BlueSWATDivision() {
             <td> <img src={blankslot} alt="blank" /> </td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export function SophieDivision() {
+  return (
+      <div className="division">
+      <h2>Black League Division</h2>
+      <table border="1">
+        <tbody>
+          <tr>
+            <th>Support Company</th>
+            <th>Regiment 1</th>
+            <th>Regiment 2</th>
+            <th>Regiment 3</th>
+            <th>Regiment 4</th>
+          </tr>
+          <tr>
+            <td> <img src={artillery} alt="artillery" /> </td>
+            <td> <img src={motorized} alt="motorized" /> </td>
+            <td> <img src={motorized} alt="motorized" /> </td>
+            <td> <img src={modtank} alt="modtank" /> </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> <img src={engineer} alt="engineer" /> </td>
+            <td> <img src={motorized} alt="motorized" /> </td>
+            <td> <img src={motorized} alt="motorized" /> </td>
+            <td> <img src={modtank} alt="modtank" /> </td>
+            <td></td>
+          </tr>
+          <tr> 
+            <td> <img src={maintanence} alt="maintanence" /> </td>
+            <td> <img src={motorized} alt="motorized" /> </td>
+            <td> <img src={motorized} alt="motorized" /> </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> <img src={logistics} alt="logistics" /> </td>
+            <td> <img src={motorized} alt="motorized" /> </td>
+            <td> <img src={motorized} alt="motorized" /> </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> <img src={blankslot} alt="blank" /> </td>
+            <td>  </td>
+            <td>  </td>
             <td></td>
             <td></td>
           </tr>
