@@ -8,9 +8,11 @@ import { Characterbio } from './components/OCbio.jsx'
 import { YumiDivision } from './components/division.jsx'
 import { DongmeiDivision } from './components/division.jsx'
 import {AmeliaDivision} from './components/division.jsx'
+import {BlueSWATDivision} from './components/division.jsx'
 import Yumi from "./assets/portraits/Yumi.png"
 import Dongmei from "./assets/portraits/Dongmei.png"
 import Amelia from "./assets/portraits/Amelia.png"
+import Blue from "./assets/portraits/Blue.png"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,6 +31,10 @@ function App() {
     setCurrentCharacter("Amelia");
   }
 
+  function changeToBlue() {
+    setCurrentCharacter("Blue");
+  }
+
   function handleCharacterChange(character) {
     switch (character) {
       case "Yumi":
@@ -37,6 +43,8 @@ function App() {
         return "Dongmei's bio here";
       case "Amelia":
         return "Amelia's bio here";
+      case "Blue":
+        return "Blue's bio here";
       default:
         return "This person cannot be found.";
     }
@@ -50,6 +58,8 @@ function App() {
         return <DongmeiDivision />;
       case "Amelia":
         return <AmeliaDivision />;
+      case "Blue":
+        return <BlueSWATDivision />;
       default:
         return null;
     }
@@ -76,7 +86,9 @@ function App() {
       <div className="buttons">
         <button onClick={changeToYumi}>Yumi Chen</button>
         <button onClick={changeToDongmei}> Dongmei Chen </button>
+        <button onClick={changeToBlue}> Blue SWAT </button>
         <button onClick={changeToAmelia}> Amelia Reed </button>
+
       </div>
       <div className="character-display">
         {currentCharacter === "Yumi" && (
@@ -95,6 +107,12 @@ function App() {
           <Character 
             name="Amelia" 
             image={Amelia} 
+          />
+        )}
+        {currentCharacter === "Blue" && (
+          <Character 
+            name="Blue SWAT" 
+            image={Blue} 
           />
         )}
       </div>
