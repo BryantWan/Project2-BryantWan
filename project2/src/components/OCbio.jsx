@@ -7,6 +7,7 @@ export function Characterbio({name}) {
         Blue: "The Police Commissioner of the Blue Rifle Corps Military Police. Counterterrorism, counterinsurgency, and counterintelligence is what she does best. Was also a highly trained detective, investigator, and SWAT officer. Father is a law professor, mother is a criminal defense lawyer.",
         Sophie: "Wait, is she part of the Blue Rifle Corps? That uniform isn't recognizable... Hmmm... \n Anyways... Sophie Yazov (though if I'm not mistaken, her name is actually Saori Petrova Ivanova) is a former Captain. I don't know if for a PMC or country, but we're keeping a close eye and leash on her just in case. She strictly drills, trains, and disciplines soldiers under her command. A stubborn disciplinarian.",
         Amelia: "Engineering student and untrained civilian survivalist. Has been hiding out in her fortified apartment complex since the zombie apocalypse begun, and unlucky for her, her university is right at the epicenter. Doesn't help that it's directly next to a virology lab...",
+        Insanity: "GET OUT WHILE YOU STILL CAN! ⶴቹረየ ⶴቹረየ! RUN! THEY'RE COMING FOR YOU! ⶴቹረየ ⶴቹረየ! YOU CAN'T ESCAPE! ⶴቹረየ ⶴቹረየ! THEY'RE EVERYWHERE! ⶴቹረየ ⶴቹረየ! YOUR MIND IS MINE! ⶴቹረየ ⶴቹረየ! EMBRACE THE MADNESS! ⶴቹረየ ⶴቹረየ!"
     };
 
     return (

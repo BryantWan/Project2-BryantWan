@@ -15,10 +15,13 @@ import Dongmei from "./assets/portraits/Dongmei.png"
 import Amelia from "./assets/portraits/Amelia.png"
 import Blue from "./assets/portraits/Blue.png"
 import Sophie from "./assets/portraits/Sophie.png"
+import Insane from "./assets/portraits/Insanity.jpg"
 
 function App() {
   const [count, setCount] = useState(0)
   const [currentCharacter, setCurrentCharacter] = useState("Yumi")
+  const [secreton, setSecreton] = useState(false)
+  const [characterClass, setCharacterClass] = useState("character-hidden")
 
 
   function changeToYumi() {
@@ -40,6 +43,18 @@ function App() {
   function changetoSophie() {
     setCurrentCharacter("Sophie");
   }
+  
+  function changtoInsanity() {
+    setCurrentCharacter("Insanity");
+  }
+
+  function Insanity() {
+    alert("WARNING! WARNING! THERE IS A CONTAINMENT BREACH! EVACUATE AND CONTACT THE BLUE RIFLE CORPS IMMEDIATELY! \nDO NOT TRY TO CONTAIN IT YOURSELF! \nDOING SO WILL RESULT IN DEATH!");
+    setSecreton(true);
+    setCharacterClass("character-visible");
+    document.body.style.backgroundColor = "red";
+    setCurrentCharacter("Insanity");
+  }
 
   function handleCharacterChange(character) {
     switch (character) {
@@ -53,6 +68,8 @@ function App() {
         return "Sophie's bio here";
       case "Amelia":
         return "Amelia's bio here";
+      case "Insanity":
+        return "You have unleashed a containment breach! Evacuate immediately!"; 
 
       default:
         return "This person cannot be found.";
@@ -103,6 +120,11 @@ function App() {
             name="Amelia Reed" 
             image={Amelia} 
           />;
+      case "Insanity":
+        return <Character 
+            name="???" 
+            image={Insane} 
+          />;
       
       default:
         return null;
@@ -133,34 +155,10 @@ function App() {
         <button onClick={changeToBlue}> Blue SWAT </button>
         <button onClick={changetoSophie}> Sophie Yazov </button>
         <button onClick={changeToAmelia}> Amelia Reed </button>
-
+        <button className={characterClass} onClick={changtoInsanity}> ??? </button>
       </div>
       <div className="character-display">
         {portraitnamechange(currentCharacter)}
-        {/*{currentCharacter === "Yumi" && (
-          <Character 
-            name="Yumi Chen" 
-            image={Yumi} 
-          />
-        )}
-        {currentCharacter === "Dongmei" && (
-          <Character 
-            name="Dongmei Chen" 
-            image={Dongmei} 
-          />
-        )}
-        {currentCharacter === "Amelia" && (
-          <Character 
-            name="Amelia" 
-            image={Amelia} 
-          />
-        )}
-        {currentCharacter === "Blue" && (
-          <Character 
-            name="Blue SWAT" 
-            image={Blue} 
-          />
-        )}*/}
       </div>
         <div className="bio">
           <Characterbio name={currentCharacter} bio={handleCharacterChange(currentCharacter)}/>
@@ -169,6 +167,10 @@ function App() {
         {divisionchange(currentCharacter)}
         </div>
     </div>
+
+    {/*<div className="secret">
+      <button className="SecretButton" onClick={Insanity}>WARNING!</button>
+    </div>*/}
     </>
   )
 }

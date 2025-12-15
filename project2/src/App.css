@@ -89,3 +89,48 @@ button {
 button:hover {
   background-color: darkgrey;
 }
+
+.secret{
+  width: 100px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.SecretButton {
+  width: 75px;
+  height: 50px;
+  padding: 10px;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  
+  /* Start invisible */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show when hovering anywhere on page */
+.SecretButton:hover {
+  background-color: red;
+  opacity: 1;
+}
+
+
+.character-hidden {
+  display: none;
+}
+
+.character-visible {
+  display: block;
+}
